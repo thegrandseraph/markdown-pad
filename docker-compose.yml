@@ -2,11 +2,12 @@ version: '3.8'
 
 services:
   markdown-pad:
-    build: .
+    # After the first GitHub Actions build, this pulls from GHCR.
+    # Until then, replace with: build: .
+    image: ghcr.io/thegrandseraph/markdown-pad:latest
     ports:
       - "5004:5004"
     volumes:
-      # Persist markdown files on the host
       - ./notes-data:/data
     environment:
       - NOTES_DIR=/data
