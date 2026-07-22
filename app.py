@@ -257,7 +257,6 @@ def index():
                 background: #2a2a3e;
                 color: #e0e0e0;
             }
-        </style>
 
         /* ---------- Mobile / Responsive ---------- */
         @media (max-width: 768px) {
@@ -308,6 +307,8 @@ def index():
                 padding: 0.2rem 0.4rem;
             }
         }
+
+        </style>
     </head>
     <body>
         <div class="toolbar">
