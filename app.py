@@ -511,4 +511,11 @@ def delete_file(name: str):
 
 
 if __name__ == "__main__":
+    print("""
+╔════════════════════════════════════════════╗
+║  Markdown Pad is running!                 ║
+║                                           ║
+║  Open:  http://localhost:5004             ║
+╚════════════════════════════════════════════╝
+""")
     uvicorn.run(app, host="0.0.0.0", port=5004)
