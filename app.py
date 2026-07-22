@@ -446,7 +446,7 @@ Type on the **left**, see the result on the **right**.
 
 - **Bold** and *italic*
 - Lists and blockquotes
-- Inline `code` with backticks
+- Inline \\`code\\` with backticks
 
 > This is a blockquote.
 
@@ -509,11 +509,17 @@ def delete_file(name: str):
 
 
 if __name__ == "__main__":
-    print("""
-╔════════════════════════════════════════════╗
-║  Markdown Pad is running!                 ║
-║                                           ║
-║  Open:  http://localhost:5004             ║
-╚════════════════════════════════════════════╝
+    import socket
+    try:
+        host_ip = socket.gethostbyname(socket.gethostname())
+    except Exception:
+        host_ip = "localhost"
+    print(f"""
++-- Markdown Pad --+
+|                   |
+|  http://{host_ip}:5004  |
+|  http://localhost:5004  |
+|                   |
++-------------------+
 """, flush=True)
     uvicorn.run(app, host="0.0.0.0", port=5004)
