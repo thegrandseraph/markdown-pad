@@ -258,6 +258,56 @@ def index():
                 color: #e0e0e0;
             }
         </style>
+
+        /* ---------- Mobile / Responsive ---------- */
+        @media (max-width: 768px) {
+            .panes {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            .panes.single {
+                grid-template-rows: 1fr;
+            }
+
+            .toolbar {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+                padding: 0.4rem;
+            }
+            .toolbar button {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+            }
+            .toolbar .filename {
+                font-size: 0.75rem;
+                width: 100%;
+                order: -1;
+            }
+            .btn-toggle {
+                font-size: 0.7rem !important;
+            }
+
+            #editor {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+            #preview-content {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+
+            .modal-box {
+                min-width: 0;
+                width: 90vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toolbar .btn-toggle {
+                font-size: 0.65rem !important;
+                padding: 0.2rem 0.4rem;
+            }
+        }
     </head>
     <body>
         <div class="toolbar">
