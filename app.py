@@ -509,17 +509,16 @@ def delete_file(name: str):
 
 
 if __name__ == "__main__":
-    import socket
-    try:
-        host_ip = socket.gethostbyname(socket.gethostname())
-    except Exception:
-        host_ip = "localhost"
-    print(f"""
-+-- Markdown Pad --+
-|                   |
-|  http://{host_ip}:5004  |
-|  http://localhost:5004  |
-|                   |
-+-------------------+
+    print("""
++-- Markdown Pad -------------------+
+|                                    |
+|  http://localhost:5004             |
+|                                    |
+|  Running on port 5004. If          |
+|  accessing from another machine,   |
+|  replace localhost with your       |
+|  server's LAN IP.                  |
+|                                    |
++------------------------------------+
 """, flush=True)
     uvicorn.run(app, host="0.0.0.0", port=5004)
