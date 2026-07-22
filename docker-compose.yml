@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  markdown-pad:
+    build: .
+    ports:
+      - "5004:5004"
+    volumes:
+      # Persist markdown files on the host
+      - ./notes-data:/data
+    environment:
+      - NOTES_DIR=/data
+    restart: unless-stopped
