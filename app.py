@@ -445,14 +445,12 @@ def index():
 Type on the **left**, see the result on the **right**.
 
 - **Bold** and *italic*
-- \`inline code\`
 - Lists and blockquotes
+- Inline `code` with backticks
 
 > This is a blockquote.
 
-\`\`\`python
-print("Code blocks work too!")
-\`\`\`
+    print("Code blocks work too!")
 
 [Links](https://example.com) and images work as well.
 `;
@@ -517,5 +515,5 @@ if __name__ == "__main__":
 ║                                           ║
 ║  Open:  http://localhost:5004             ║
 ╚════════════════════════════════════════════╝
-""")
+""", flush=True)
     uvicorn.run(app, host="0.0.0.0", port=5004)
